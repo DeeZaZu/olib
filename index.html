@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteraVerse - Online Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Dee Books</span>
+            </div>
+            <nav>
+        <ul>
+                    <li><a href="index.html"  class="active">Home</a></li>
+                    <li><a href="catalog.html">Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+    </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="#" class="btn btn-outline" id="login-btn">Login</a>
+                <a href="#" class="btn btn-primary" id="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Home Page -->
+    <div id="home-page" class="page active">
+        <section class="hero">
+            <div class="container">
+                <h1>Discover Your Next Great Read</h1>
+                <p>Access thousands of books online anytime, anywhere. Join our community of readers today!</p>
+                <a href="#" class="btn btn-primary" id="browse-catalog">Browse Catalog</a>
+            </div>
+        </section>
+
+        <main class="container">
+            <div class="section-title">
+                <h2>Our Featured Books</h2>
+            </div>
+            <div class="books-grid" id="featured-books">
+                <!-- Featured books will be loaded here -->
+            </div>
+
+            <div class="section-title">
+                <h2>Why Choose Dee Books?</h2>
+            </div>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Vast Collection</h3>
+                    <p>Access over 10,000 books across all genres with new titles added weekly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Read Anywhere</h3>
+                    <p>Access your books on any device - desktop, tablet, or smartphone.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Sync Progress</h3>
+                    <p>Your reading progress syncs across all your devices automatically.</p>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Catalog Page -->
+    <div id="catalog-page" class="page">
+        <main class="container">
+            <div class="section-title">
+                <h2>Book Catalog</h2>
+            </div>
+            
+            <div class="catalog-filters">
+                <div class="form-group">
+                    <label for="genre-filter">Filter by Genre:</label>
+                    <select id="genre-filter">
+                        <option value="all">All Genres</option>
+                        <option value="fiction">Fiction</option>
+                        <option value="non-fiction">Non-Fiction</option>
+                        <option value="sci-fi">Sci-Fi</option>
+                        <option value="mystery">Mystery</option>
+                        <option value="biography">Biography</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="books-grid" id="catalog-books">
+                <!-- Catalog books will be loaded here -->
+            </div>
+        </main>
+    </div>
+
+    <!-- About Page -->
+    <div id="about-page" class="page">
+        <main class="container">
+            <div class="section-title">
+                <h2>About Dee Books</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>LiteraVerse was founded in 2020 with a simple mission: to make great literature accessible to everyone. We believe that reading transforms lives and should be available to all regardless of location or circumstance.</p>
+                    <p>Our team of passionate librarians, technologists, and book lovers work tirelessly to curate the best collection of books and provide the most seamless reading experience possible.</p>
+                    
+                    <h3>Our Values</h3>
+                    <p><strong>Accessibility:</strong> We're committed to making books available to everyone.</p>
+                    <p><strong>Quality:</strong> We carefully curate our collection to ensure only the best books make it into our library.</p>
+                    <p><strong>Community:</strong> We foster a community of readers who share recommendations and discuss their favorite books.</p>
+                </div>
+                <div class="about-image">
+                    <i class="fas fa-book-open"></i>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact-page" class="page">
+        <main class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+            </div>
+            
+            <div class="contact-form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Your full name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Your email address">
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="support">Technical Support</option>
+                        <option value="suggestion">Book Suggestion</option>
+                        <option value="partnership">Partnership</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" placeholder="Your message..."></textarea>
+                </div>
+                <button class="btn btn-primary" id="send-message">Send Message</button>
+            </div>
+        </main>
+    </div>
+
+    <!-- Login/Signup Page -->
+    <div id="auth-page" class="page">
+        <main class="container">
+            <div class="tabs">
+                <div class="tab active" id="login-tab">Login</div>
+                <div class="tab" id="signup-tab">Sign Up</div>
+            </div>
+            
+            <div class="auth-form">
+                <div class="form-header">
+                    <h2 id="form-title">Welcome Back!</h2>
+                    <p>Sign in to access your account</p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="auth-email">Email</label>
+                    <input type="email" id="auth-email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label for="auth-password">Password</label>
+                    <input type="password" id="auth-password" placeholder="Your password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary" id="auth-submit">Login</button>
+                </div>
+                <div class="form-footer" style="text-align: center; margin-top: 20px;">
+                    <a href="#" style="color: var(--primary);">Forgot password?</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- User Profile Page -->
+    <div id="profile-page" class="page">
+        <main class="container">
+            <div class="section-title">
+                <h2>Your Account</h2>
+            </div>
+            
+            <div class="profile-content">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>John Doe</h3>
+                    <p>Member since: Jan 2024</p>
+                    <p>Borrowed: 7 books</p>
+                    <p>Reading: 2 books</p>
+                    
+                    <div class="profile-nav" style="margin-top: 30px;">
+                        <div class="profile-nav-item" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer;">
+                            <i class="fas fa-book"></i> My Books
+                        </div>
+                        <div class="profile-nav-item" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer;">
+                            <i class="fas fa-history"></i> Reading History
+                        </div>
+                        <div class="profile-nav-item" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer;">
+                            <i class="fas fa-cog"></i> Account Settings
+                        </div>
+                        <div class="profile-nav-item" id="logout-btn" style="padding: 10px 0; border-bottom: 1px solid #eee; cursor: pointer; color: var(--accent);">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="profile-info">
+                    <h3>Currently Borrowed</h3>
+                    
+                    <div class="borrowed-books">
+                        <div class="borrowed-book">
+                            <img src="https://placehold.co/60x80/4a6fa5/ffffff?text=Book" alt="Book Cover">
+                            <div class="book-details">
+                                <h4>Pride and Prejudice</h4>
+                                <p>Jane Austen</p>
+                                <p class="return-date">Due: Jan 15, 2026</p>
+                            </div>
+                        </div>
+                        <div class="borrowed-book">
+                            <img src="https://placehold.co/60x80/4a6fa5/ffffff?text=Book" alt="Book Cover">
+                            <div class="book-details">
+                                <h4>1984</h4>
+                                <p>George Orwell</p>
+                                <p class="return-date">Due: Jan 20, 2026</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Borrow Confirmation -->
+    <div id="confirmation-page" class="page">
+        <main class="container">
+            <div class="confirmation">
+                <i class="fas fa-check-circle"></i>
+                <h2>Book Successfully Borrowed!</h2>
+                <p>You can now access this book in your profile under "Currently Borrowed".</p>
+                <a href="#" class="btn btn-primary" data-page="profile" style="margin-top: 20px;">View My Books</a>
+                <a href="#" class="btn btn-outline" data-page="catalog" style="margin-top: 10px;">Browse More Books</a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Loading Indicator -->
+    <div class="loader" id="loader">
+        <i class="fas fa-spinner"></i>
+        <p>Processing your request...</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dee Books</h3>
+                    <p>Your gateway to a world of literature. Discover, borrow, and enjoy books anytime, anywhere.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="catalog">Book Catalog</a></li>
+                        <li><a href="#" data-page="about">About Us</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                        <li><a href="#" data-page="profile">My Account</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> tukuntawa kano </li>
+                        <li><i class="fas fa-phone"></i> +234-08136869388</li>
+                        <li><i class="fas fa-envelope"></i> zakariyyamasud56@gmail.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dee Books Library. All rights reserved. | Designed for SIWES Project</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="scrpt.js"></script>
+</html>
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Catalog - LiteraVerse Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-book-open"></i>
+                <span>Dee Books</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="catalog.html" class="active">Catalog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <div class="section-title">
+            <h1>Book Catalog</h1>
+        </div>
+        
+        <!-- Catalog Controls -->
+        <div class="catalog-controls">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" id="search-input" placeholder="Search books by title, author, or genre...">
+            </div>
+            
+            <div class="filter-sort">
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <option value="fiction">Fiction</option>
+                    <option value="non-fiction">Non-Fiction</option>
+                    <option value="sci-fi">Science Fiction</option>
+                    <option value="mystery">Mystery</option>
+                    <option value="biography">Biography</option>
+                    <option value="history">History</option>
+                    <option value="fantasy">Fantasy</option>
+                </select>
+                
+                <select id="sort-by">
+                    <option value="title-asc">Title (A-Z)</option>
+                    <option value="title-desc">Title (Z-A)</option>
+                    <option value="author-asc">Author (A-Z)</option>
+                    <option value="author-desc">Author (Z-A)</option>
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="rating">Highest Rated</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Books Grid -->
+        <div class="books-grid" id="books-container">
+            <!-- Books will be loaded here by JavaScript -->
+        </div>
+        
+        <!-- Empty State -->
+        <div class="empty-state" id="empty-state" style="display: none;">
+            <i class="fas fa-book"></i>
+            <h3>No Books Found</h3>
+            <p>Try adjusting your search or filter criteria</p>
+        </div>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <a href="#" class="active">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#"><i class="fas fa-chevron-right"></i></a>
+        </div>
+    </main>
+
+    <!-- Loading Indicator -->
+    <div class="loader" id="loader">
+        <i class="fas fa-spinner"></i>
+        <p>Loading books...</p>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background: var(--dark); color: white; padding: 40px 0 20px; margin-top: 60px;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 30px;">
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">Dee Books</h3>
+                    <p>Your gateway to a world of literature. Discover, borrow, and enjoy books anytime, anywhere.</p>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">Quick Links</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><a href="index.html" style="color: #ddd; text-decoration: none;">Home</a></li>
+                        <li style="margin-bottom: 10px;"><a href="#" style="color: #ddd; text-decoration: none;">Book Catalog</a></li>
+                        <li style="margin-bottom: 10px;"><a href="about.html" style="color: #ddd; text-decoration: none;">About Us</a></li>
+                        <li style="margin-bottom: 10px;"><a href="contact.html" style="color: #ddd; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 20px; position: relative; padding-bottom: 10px;">Contact Info</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> tukuntawa zoo raod kano</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-phone" style="margin-right: 10px;"></i> +234 08136869388</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-envelope" style="margin-right: 10px;"></i> zakariyyamasud5@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #aaa; font-size: 0.9rem;">
+                <p>&copy; 2026 Dee Books Library. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="scrpt.js"></script>
+</html>
+
